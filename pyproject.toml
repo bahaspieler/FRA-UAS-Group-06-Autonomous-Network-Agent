@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomous-network-agent"
+version = "0.1.0"
+description = "A safe, auditable autonomous agent MVP for an Open5GS test network"
+requires-python = ">=3.9"
+
+[project.scripts]
+network-agent = "autonomous_network_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
